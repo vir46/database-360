@@ -15,7 +15,8 @@ class ScoringController extends Controller
      */
     public function index()
     {
-
+        $scoring = scoringdata::all();
+        return response()->json($scoring);
     }
 
     /**
@@ -64,6 +65,7 @@ class ScoringController extends Controller
      * @param  \App\Models\scoringdata  $scoringdata
      * @return \Illuminate\Http\Response
      */
+
     public function show(Request $request)
     {
         $scoringdata = scoringdata::where('id_to', $request->id)->get();

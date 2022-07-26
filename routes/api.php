@@ -25,6 +25,7 @@ Route::get('/karyawan', 'Api\KaryawanController@index');
 
 
 Route::get('/scoring/{id}', 'Api\ScoringController@show');
+Route::get('/scoringall', 'Api\ScoringController@index');
 Route::post('/scoring', 'Api\ScoringController@store');
 Route::get('/check/{id_from}/{id_to}', 'Api\ScoringController@check_available');
 

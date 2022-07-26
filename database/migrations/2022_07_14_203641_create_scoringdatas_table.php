@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('scoringdata');
         Schema::create('scoringdata', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_from')->constrained('karyawan');
